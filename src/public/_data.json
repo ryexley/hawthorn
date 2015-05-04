@@ -1,0 +1,21 @@
+{
+    "index": {
+        "sites": [
+            {
+                "url": "https://www.abcmouse.com/",
+                "title": "ABC Mouse",
+                "img": ""
+            },
+            {
+                "url": "http://www.nickjr.com/",
+                "title": "Nick Jr.",
+                "img": ""
+            },
+            {
+                "url": "http://disneyjunior.com/",
+                "title": "Disney Junior",
+                "img": ""
+            }
+        ]
+    }
+}
