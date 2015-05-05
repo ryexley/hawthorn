@@ -7,7 +7,7 @@ var root = require("./root");
 var express = require("express");
 var router = express.Router();
 
-router.use("/api", root);
+router.use("/", root);
 // router.use("/api/auth", auth);
 
 debug("Exporting router:", router);

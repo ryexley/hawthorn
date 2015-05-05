@@ -1,5 +1,6 @@
 "use strict";
 
+var path = require("path");
 var debug = require("debug")("hawthorn");
 var express = require("express");
 var logger = require("morgan");
@@ -33,6 +34,9 @@ express.response.error = function (options) {
 };
 
 var app = express();
+
+app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "jade");
 
 app.use(logger("dev"));
 app.use(bodyParser.json());

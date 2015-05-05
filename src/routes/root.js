@@ -5,8 +5,7 @@ var express = require("express");
 var router = express.Router();
 
 router.get("/", function (req, res) {
-    debug("Logged in user:", req.user);
-    res.success({ message: "Hawthorn API" });
+    res.render("index");
 });
 
 module.exports = router;
