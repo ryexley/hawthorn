@@ -1,0 +1,19 @@
+{
+    "sites": [{
+        "url": "//abcmouse.com",
+        "title": "ABC Mouse",
+        "image": "http://7onashoestring.com/wp-content/uploads/2013/07/ABCmouse-logo.jpg"
+    }, {
+        "url": "//www.nickjr.com",
+        "title": "Nick Jr.",
+        "image": "http://www.nickjr.com/assets/repaint/new-logo.jpg"
+    }, {
+        "url": "//disneyjunior.com",
+        "title": "Disney Junior",
+        "image": "http://cdnvideo.dolimg.com/cdn_assets/86291062ffccc4009ab2ea68e7bba3b67cc96214.jpg"
+    }, {
+        "url": "//club.lego.com",
+        "title": "Lego Club",
+        "image": "http://lego.lk/wp-content/uploads/2012/08/lego-club.png"
+    }]
+}

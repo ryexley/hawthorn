@@ -1,0 +1,49 @@
+@import "normalize";
+@import "../../../node_modules/scut/dist/scut";
+@import "variables";
+@import "util";
+
+/* Application Styles */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: $color-background;
+    font-family: "Helvetica, Arial, sans-serif";
+}
+
+.sites {
+    @include scut-list-unstyled;
+    @include scut-clearfix;
+    padding: -rhythm();
+    position: relative;
+    text-align: center;
+
+    li {
+        float: left;
+        padding: 1em;
+        text-align: center;
+        width: 95%;
+
+        @include minWidth($bp-tablet) {
+            width: 33.33333%;
+        }
+
+        @include minWidth($bp-desktop-small) {
+            width: 25%;
+        }
+    }
+}
+
+.site-link {
+    background-color: #fff;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    display: block;
+    @include scut-ratio-box;
+}

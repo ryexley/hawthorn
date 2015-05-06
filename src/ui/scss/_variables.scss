@@ -1,0 +1,9 @@
+$type-base-fontSize: 16px;
+$type-base-lineHeight: 1.5;
+$rhythmUnit: $type-base-fontSize * $type-base-lineHeight; // 16 * 1.5 == 24
+
+$color-background: #f7f7f7;
+
+// breakpoints
+$bp-tablet: 640;
+$bp-desktop-small: 1024;

@@ -1,0 +1,60 @@
+@function -rhythm($multiplier: 1, $context: $type-base-fontSize, $offset: 0) {
+  @return if($multiplier == 0, 0, scut-em($rhythmUnit * $multiplier + $offset, $context));
+}
+
+@mixin rhythm-prop($property, $values, $context: $type-base-fontSize, $offset: 0) {
+  @if length($values) == 1 {
+    #{$property}: -rhythm($values, $context, $offset);
+  }
+
+  @if length($values) == 2 {
+    $y: nth($values, 1);
+    $x: nth($values, 2);
+
+    #{$property}: -rhythm($y, $context, $offset) -rhythm($x, $context, $offset);
+  }
+
+  @if length($values) == 3 {
+    $top: nth($values, 1);
+    $x: nth($values, 2);
+    $bottom: nth($values, 3);
+
+    #{$property}: -rhythm($top, $context, $offset) -rhythm($x, $context, $offset) -rhythm($bottom, $context, $offset);
+  }
+
+  @if length($values) == 4 {
+    $top: nth($values, 1);
+    $right: nth($values, 2);
+    $bottom: nth($values, 3);
+    $left: nth($values, 4);
+
+    #{$property}: -rhythm($top, $context, $offset) -rhythm($right, $context, $offset)
+                  -rhythm($bottom, $context, $offset) -rhythm($left, $context, $offset);
+  }
+}
+
+@mixin rhythm-margin($margin, $context: $type-base-fontSize, $offset: 0) {
+  @include rhythm-prop(margin, $margin, $context);
+}
+
+@mixin rhythm-padding($padding, $context: $type-base-fontSize, $offset: 0) {
+  @include rhythm-prop(padding, $padding, $context);
+}
+
+@mixin minWidth($threshold) {
+  @media screen and (min-width: scut-em($threshold)) {
+    @content;
+  }
+}
+
+@mixin maxWidth($threshold) {
+  @media screen and (max-width: scut-em($threshold)) {
+    @content;
+  }
+}
+
+@mixin between($minWidth, $maxWidth) {
+  @media screen and (min-width: scut-em($minWidth)) and (max-width: scut-em($maxWidth)) {
+    @content;
+  }
+}

@@ -1,0 +1,11 @@
+extends ./layout.jade
+
+block content
+    h1 Hello boys!
+    ul.sites
+        each site in sites
+            li
+                if site.image !== ""
+                    a(href="#{ site.url }", class="site-link", style="background-image: url('#{ site.image }')", target="_blank", title="Go to #{ site.title }")
+                else
+                    a(href="#{ site.url }", class="site-link", target="_blank", title="Go to #{ site.title }")= site.title

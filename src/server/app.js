@@ -4,9 +4,12 @@ var path = require("path");
 var debug = require("debug")("hawthorn");
 var express = require("express");
 var logger = require("morgan");
+var favicon = require('serve-favicon');
 var cookieParser = require("cookie-parser");
 var bodyParser = require("body-parser");
 var session = require("express-session");
+
+var data = require("./data");
 
 // common response extension functions to facilitate a common response pattern
 express.response.success = function (options) {
@@ -38,10 +41,13 @@ var app = express();
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "jade");
 
+app.use(favicon(__dirname + '/public/img/favicon.ico'));
 app.use(logger("dev"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(express.static(path.join(__dirname, "public")));
+app.use(data.middleware);
 
 app.use(session({
     name: "hawthorn",
