@@ -58,3 +58,11 @@
     @content;
   }
 }
+
+@mixin vertical-gradient($top, $bottom) {
+  background-image: linear-gradient($top, $bottom);
+}
+
+@mixin bottom-right-gradient($start, $end) {
+  background-image: linear-gradient(to bottom right, $start, $end);
+}

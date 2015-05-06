@@ -10,8 +10,23 @@
 }
 
 body {
-    background: $color-background;
-    font-family: "Helvetica, Arial, sans-serif";
+    background: $color-main-background;
+    color: $color-base-textColor;
+    font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+header {
+    text-align: center;
+}
+
+footer {
+    font-size: 0.75em;
+    text-align: center;
+}
+
+.site-list {
+    @include bottom-right-gradient(#333, #111);
+    text-align: center;
 }
 
 .sites {
@@ -23,9 +38,9 @@ body {
 
     li {
         float: left;
-        padding: 1em;
+        padding: -rhythm();
         text-align: center;
-        width: 95%;
+        width: 50%;
 
         @include minWidth($bp-tablet) {
             width: 33.33333%;
@@ -42,8 +57,27 @@ body {
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: contain;
-    border: 1px solid #ccc;
+    border: 3px solid #777;
     border-radius: 50%;
     display: block;
     @include scut-ratio-box;
+    transition: all .2s ease-in-out;
+
+    &.text {
+        background-color: transparent;
+        border: none;
+        border-radius: 0;
+        color: #f90;
+        font-size: 2.5em;
+        text-decoration: none;
+
+        &::before {
+            padding: 0;
+        }
+    }
+
+    &:hover {
+        border: 5px solid #0f0;
+        transform: scale(1.2);
+    }
 }

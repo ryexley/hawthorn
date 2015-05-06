@@ -1,5 +1,9 @@
 {
     "sites": [{
+        "url": "//pbskids.org/",
+        "title": "PBS Kids",
+        "image": "http://pbskids.org/design/images/logo.png"
+    }, {
         "url": "//abcmouse.com",
         "title": "ABC Mouse",
         "image": "http://7onashoestring.com/wp-content/uploads/2013/07/ABCmouse-logo.jpg"
@@ -15,5 +19,17 @@
         "url": "//club.lego.com",
         "title": "Lego Club",
         "image": "http://lego.lk/wp-content/uploads/2012/08/lego-club.png"
+    }, {
+        "url": "//www.buildwithchrome.com/",
+        "title": "Lego Build",
+        "image": "https://www.buildwithchrome.com/v2-2-1.376043847035368998/img/v2/top-logo.png"
+    }, {
+        "url": "http://www.nasa.gov/audience/forkids/kidsclub/flash/",
+        "title": "NASA Kids Club",
+        "image": "https://www.nasa.gov/sites/default/files/images/nkcgraphic7_231x198.jpg"
+    }, {
+        "url": "//discoverykids.com/",
+        "title": "Discovery Kids",
+        "image": "http://fusion.ddmcdn.com/app/discovery-kids/themes/discoverykids/assets/img/logo.png"
     }]
 }
